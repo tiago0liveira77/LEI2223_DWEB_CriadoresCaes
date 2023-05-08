@@ -41,12 +41,14 @@ namespace CriadorDeCaes.Models
         /// <summary>
         /// Morada do criador
         /// </summary>
+        [Required(ErrorMessage = "A {0} é de preenchimento obrigatório.")]
         [StringLength(60)]
         public string Morada { get; set; }
 
         /// <summary>
         /// Código Postal da morada do criador
         /// </summary>
+        [Required(ErrorMessage = "O {0} é de preenchimento obrigatório.")]
         [Display(Name = "Código Postal")]
         [RegularExpression("[1-9][0-9]{3}-[0-9]{3}( ){1,3}[A-Z -ÇÀÁÉÍÓÚÂÊÎÔÛ]+",
                          ErrorMessage = "O {0} deve ter o formato XXXX-XXX NOME DA TERRA")]
